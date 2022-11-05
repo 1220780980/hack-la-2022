@@ -19,8 +19,8 @@ score = gradebook.sort_values(by=["Student"]).drop(index=0).drop(index=1)["Curre
 # plt.xlabel("Total Activity Time")
 # plt.ylabel("Current Score")
 # plt.title("Total Activity Time vs Current Score")
-# for i in range(score.shape[0]):
-#     print("x: " + total_time.iloc[i], "y: ")
+for i in range(score.shape[0]):
+    print("x: " + total_time.iloc[i] + ",y:")
 # print(enrollments.sort_values(by=["user_id"])["total_activity_time"])
 # print(enrollments.sort_values(by=["user_id"]).drop(index=34))
 # print(gradebook.sort_values(by=["Student"]).drop(index=0).drop(index=1)["Current Score"])
