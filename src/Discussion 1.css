@@ -38,3 +38,9 @@ header ul li a.active
     background: #fff;
     color: #2b1055;
 }
+canvas
+{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 160px;
+}

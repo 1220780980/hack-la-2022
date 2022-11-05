@@ -44,18 +44,6 @@ mod_three_data = temp.loc[temp["module_position"]==3]["title"].tolist()
 #         temp_name = "module_3_" + str(i) + ".csv"
 #         temp = temp.to_csv(temp_name)
 
-
-
-
-# 根据不同的<倒数第二个column>进行分类
-# 根据分类拆成小的csv
-# 对每一个csv进行画图
-# 画barchart
-# x-pos：时间
-# y-pos：人数
-# 需要total人数
-
-
 discussion_1 = pandas.read_csv("module_3_1.csv")
-week1 = discussion_1.sort_values(by=["event_time"]).loc[(discussion_1["event_time"] >= "2033-01-05") & (discussion_1["event_time"] < "2033-01-12")]
+week1 = discussion_1.sort_values(by=["event_time"]).loc[(discussion_1["event_time"] >= "2033-05-15") & (discussion_1["event_time"] < "2033-05-25")]
 print(week1)
