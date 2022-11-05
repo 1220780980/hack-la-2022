@@ -10,7 +10,7 @@ gradebook = pandas.read_csv("../data/additional/gradebook.csv")
 module_items = pandas.read_csv("../data/additional/module_items.csv")
 pages = pandas.read_csv("../data/additional/pages.csv")
 
-# print(enrollments.sort_values(by=["user_id"])["user_id"])
+print(module_items.sort_values(by=["module_position"]))
 # print(gradebook.sort_values(by=["Student"])["Student"])
 # print(navigation_events["event__object_extensions_asset_name"])
 
