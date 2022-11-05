@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enrollment of course</title>
+    <link rel="stylesheet" type="text/css" href="Enrollment.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="home.html" class="active">Back</a></li>
+        </ul>
+        <h1>Enrollmented Students</h1>
+    </header>
+    <div title="Activity time: 985351; Assignment 1: 79; Assignment 2: 84; 
+    Assignment 3 (option C): 73; Current Score: 80.9" class="student">Learner 1</div>
+    <div title="Activity time: 152876; Assignment 1: 93; Assignment 2: 85; 
+    Assignment 3 (option C): 95; Current Score: 84.6" class="student">Learner 2</div>
+    <div class="student">Learner 3</div>
+    <div class="student">Learner 4</div>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script>
+        const ctx = document.getElementById('myChart');
+        const data = {
+        datasets: [{
+            label: '散点图实例',
+            data: [{
+            x: -10,
+            y: 0
+            }, {
+            x: 0,
+            y: 10
+            }, {
+            x: 10,
+            y: 5
+            }, {
+            x: 0.5,
+            y: 5.5
+            }],
+            backgroundColor: 'rgb(255, 99, 132)'
+        }],
+        };
+        const config = {
+        type: 'scatter',
+        data: data,
+        options: {
+            responsive: false, // 设置图表为响应式，根据屏幕窗口变化而变化
+            maintainAspectRatio: true,// 保持图表原有比例
+            scales: {
+            x: {
+                type: 'linear',
+                position: 'bottom'
+            }
+            }
+        }
+        };
+        const myChart = new Chart(ctx, config);
+    </script>
+
+</body>
+</html>
