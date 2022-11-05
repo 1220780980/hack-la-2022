@@ -20,7 +20,7 @@ score = gradebook.sort_values(by=["Student"]).drop(index=0).drop(index=1)["Curre
 # plt.ylabel("Current Score")
 # plt.title("Total Activity Time vs Current Score")
 # for i in range(score.shape[0]):
-#     print("x: " + total_time.iloc[i] + ",y:")
+#     print("{x: " + str(total_time.iloc[i]) + ",y: " + str(score.iloc[i]) + "},")
 # print(enrollments.sort_values(by=["user_id"])["total_activity_time"])
 # print(enrollments.sort_values(by=["user_id"]).drop(index=34))
 # print(gradebook.sort_values(by=["Student"]).drop(index=0).drop(index=1)["Current Score"])
@@ -34,7 +34,7 @@ nav_mod_data = navigation_events.loc[navigation_events["event__object_extensions
 
 temp = module_items.drop_duplicates(subset=["title"])
 mod_three_data = temp.loc[temp["module_position"]==3]["title"].tolist()
-print(mod_three_data)
+# print(mod_three_data)
 # print(nav_mod_data)
 
 # Split navigation events based on "title" in module_items
@@ -54,3 +54,8 @@ print(mod_three_data)
 # x-pos：时间
 # y-pos：人数
 # 需要total人数
+
+
+discussion_1 = pandas.read_csv("module_3_1.csv")
+week1 = discussion_1.sort_values(by=["event_time"]).loc[(discussion_1["event_time"] >= "2033-01-05") & (discussion_1["event_time"] < "2033-01-12")]
+print(week1)
